@@ -39,6 +39,7 @@ export default function CardBussinesComponent({
           handleEdit={handleEdit}
           handleLike={handleLike}
           likes={card.likes}
+          phone={card.phone}
         />
       </Card>
     </>

@@ -16,6 +16,7 @@ export default function CardActionBar({
   id,
   user_id,
   likes,
+  phone,
 }) {
   const { user } = useUser();
   const [isDialogOpen, setDialog] = useState(false);
@@ -53,9 +54,11 @@ export default function CardActionBar({
         </Box>
 
         <Box>
-          <IconButton aria-label="Call">
-            <CallIcon />
-          </IconButton>
+          <a href={"tel:" + phone}>
+            <IconButton aria-label="Call">
+              <CallIcon />
+            </IconButton>
+          </a>
           {user && (
             <IconButton aria-label="Add to favorite" onClick={handleLikeCard}>
               <FavoriteIcon color={isLiked ? "error" : "inherit"} />
